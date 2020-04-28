@@ -4,7 +4,8 @@ using System.Text;
 
 namespace SclManagementSystem.Data.Models
 {
-    class Teacher
+    public class Teacher
     {
+
     }
 }

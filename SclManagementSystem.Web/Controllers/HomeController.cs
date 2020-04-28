@@ -9,16 +9,16 @@ namespace SclManagementSystem.Web.Controllers
 {
     public class HomeController : Controller
     {
-        IStudentData db;
-        public HomeController()
-        {
-            db = new InMemoryStudentData();
-        }
-        public ActionResult Index()
-        {
-            var model = db.GetAll();
-            return View(db);
-        }
+        //IStudentData db;
+        //public HomeController()
+        //{
+        //    db = new InMemoryStudentData();
+        //}
+        //public ActionResult Index()
+        //{
+        //    var model = db.GetAll();
+        //    return View(db);
+        //}
 
         public ActionResult About()
         {

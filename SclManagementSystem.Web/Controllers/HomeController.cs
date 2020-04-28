@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SclManagementSystem.Data.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,15 @@ namespace SclManagementSystem.Web.Controllers
 {
     public class HomeController : Controller
     {
+        IStudentData db;
+        public HomeController()
+        {
+            db = new InMemoryStudentData();
+        }
         public ActionResult Index()
         {
-            return View();
+            var model = db.GetAll();
+            return View(db);
         }
 
         public ActionResult About()
